@@ -23,7 +23,7 @@ class KRCodecModule : KuiklyRenderBaseModule() {
 
     private fun md5(params: String?): String {
         val string = params ?: return ""
-        return CALCULATE_MD5_FUN(string, 16).unsafeCast<String>()
+        return CALCULATE_MD5_FUN(string, 32).unsafeCast<String>()
     }
 
     private fun sha256(params: String?): String {

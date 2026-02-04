@@ -48,7 +48,7 @@ class KRCodecModule : KuiklyRenderBaseModule() {
         val digest = md.digest(string.toByteArray())
         val bigInt = BigInteger(1, digest)
         val md5Hash32 = bigInt.toString(16).padStart(32, '0')
-        return md5Hash32.substring(8, 24) // 截取中间的16位
+        return md5Hash32 // 返回完整的32位MD5
     }
 
     fun sha256(input: String): String {

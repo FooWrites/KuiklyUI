@@ -137,7 +137,7 @@ std::string KRMd5(const std::string &in) {
     for (int i = 0; i < MD5_DIGEST_LENGTH; ++i) {
         out << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(md[i]);
     }
-    return out.str().substr(8, 16);
+    return out.str(); // 返回完整的32位MD5
 }
 
 std::string KRSha256(const std::string &in) {
